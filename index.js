@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Hello from AWS EC2! Did some Changes");
+  res.send("Hello from AWS EC2! Did some Changes!?");
 });
 
 app.listen(3000, () => {
