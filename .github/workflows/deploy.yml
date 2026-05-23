@@ -22,7 +22,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
 
           script: |
-            cd app
+            cd /home/ec2-user/github-actions-demo 
             git pull origin main
             npm install
             pm2 restart index || pm2 start index.js --name index
