@@ -2,17 +2,17 @@ name: Deploy to AWS EC2
 
 on:
   push:
-    branch:
+    branches:
       - main
 
 jobs:
   deploy:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: action/checkout@v4
-      
+        uses: actions/checkout@v4
+
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.3
 
